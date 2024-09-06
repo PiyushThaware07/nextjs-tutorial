@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 
-export default function Home() {
+export default function page() {
   const [count, setCount] = useState(20);
   return (
     <div className="p-10">

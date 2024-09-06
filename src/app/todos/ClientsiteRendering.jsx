@@ -7,13 +7,21 @@ import custom from "../custom.module.css"
 export default function ClientsiteRendering() {
     const [user, setUser] = useState([]);
     useEffect(() => {
+        // Define the async function inside useEffect
         async function fetchApi() {
-            const request = await fetch("https://dummyjson.com/users");
-            const response = await request.json();
-            setUser(response.users);
+            setTimeout(async () => {
+                try {
+                    const request = await fetch("https://dummyjson.com/users");
+                    const response = await request.json();
+                    setUser(response.users); // Set user data in state
+                } catch (error) {
+                    console.error("Error fetching users:", error);
+                }
+            }, 6000); // 6 seconds delay
         }
-        fetchApi();
-    }, [])
+
+        fetchApi(); // Call the function
+    }, []);
 
     console.log(user);
 

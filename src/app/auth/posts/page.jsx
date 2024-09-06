@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-export default function Posts() {
+export default function page() {
     return (
         <div>
             <h1 className="text-2xl font-semibold text-white">Posts</h1>

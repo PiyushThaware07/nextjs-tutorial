@@ -7,3 +7,11 @@ export default function Signin() {
     </div>
   )
 }
+
+
+export function generateMetadata({params}){
+  return {
+    title : "Signin",
+    description : "This is signin page"
+  }
+}
